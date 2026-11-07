@@ -30,6 +30,10 @@
   document.querySelectorAll('a[href^="https://play.google.com/"]').forEach(function(a){ a.addEventListener('click', function(){
     var m=/[?&]id=([^&]+)/.exec(a.href); track({event:'play_click', app_id:m?m[1]:''}); }); });
 
+  document.querySelectorAll('button[data-pick]').forEach(function(b){ b.addEventListener('click', function(){
+    var on=b.dataset.pick==='all';
+    b.closest('form').querySelectorAll('input[name=games]').forEach(function(c){ c.checked=on; }); }); });
+
   var URL_=document.body.dataset.signup||'', MAIL=document.body.dataset.mail;
   function say(form, key, cls){ var m=form.querySelector('.msg'); m.className='msg '+cls;
     m.innerHTML=form.querySelector('template[data-k="'+key+'"]').innerHTML; }
