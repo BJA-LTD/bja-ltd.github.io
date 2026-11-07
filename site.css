@@ -14,6 +14,8 @@ a{color:var(--accent)}
 .cookie p{margin:0 0 10px}
 .cookie .row{margin-top:0;align-items:center}
 .cookie .btn{padding:9px 16px}
+.localbar{background:#fff3c4;color:#4a3a00;text-align:center;font-size:.9rem;padding:6px 16px}
+.localbar a{color:#4a3a00;font-weight:700}
 .linkbtn{font:inherit;color:var(--accent);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 header.hero{background:linear-gradient(160deg,#0d6e8c,#38b6c9 55%,#bdeef0);color:#fff;padding:56px 16px 48px;text-align:center}
 header.hero h1{margin:0;font-size:clamp(2rem,6vw,3rem);letter-spacing:.12em}
@@ -42,6 +44,7 @@ textarea{min-height:110px}
 .pick label,.consent{display:flex;gap:8px;align-items:flex-start;font-weight:400;margin:0}
 .consent{margin:14px 0}
 .picktools{margin:0 0 6px;font-size:.95rem}
+.card .note{margin:14px 0 0;font-size:.95em}
 .games-pick{margin-top:22px;padding-top:6px;border-top:1px solid var(--line)}
 .games-pick>label{font-weight:600;color:var(--mute)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}

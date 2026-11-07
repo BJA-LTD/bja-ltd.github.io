@@ -46,6 +46,7 @@
       if(kind==='signup'){ data.games=fd.getAll('games'); if(!data.games.length){ say(form,'games','err'); return; } }
       else { ['name','arrive','depart','guests','message'].forEach(function(k){ data[k]=(fd.get(k)||'').toString().trim(); }); data.guests=+data.guests||0; }
       if(!data.consent){ say(form,'consent','err'); return; }
+      if(document.body.dataset.local){ say(form,'local','err'); return; }
       if(!URL_){
         if(kind==='signup') mailto('Early access', 'Please add '+data.email+' to the early-access testers of: '+data.games.join(', '));
         else mailto('Enquiry: '+data.name, data.message+'\n\n'+data.arrive+' > '+data.depart+', '+data.guests+' guests\n'+data.email);
